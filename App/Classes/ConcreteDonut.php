@@ -13,6 +13,6 @@ class ConcreteDonut implements Donut
 
     public function getCost(): float
     {
-        return (float) 2.00;
+        return (float) 1;
     }
 }

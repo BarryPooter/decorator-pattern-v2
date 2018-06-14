@@ -2,17 +2,10 @@
 
 namespace App\Classes;
 
-use App\Contracts\Donut;
+use App\Decorator\DonutDecorator;
 
-class ChocolateDonut implements Donut
+class ChocolateDonut extends DonutDecorator
 {
-    protected $donut;
-
-    public function __construct (Donut $donut)
-    {
-        $this->donut = $donut;
-    }
-
     public function getDescription(): string
     {
         return "Chocolate " . $this->donut->getDescription();

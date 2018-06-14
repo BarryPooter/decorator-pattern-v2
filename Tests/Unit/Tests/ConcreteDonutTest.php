@@ -3,6 +3,7 @@
 namespace Tests;
 
 use App\Classes\ConcreteDonut;
+use App\Contracts\Donut;
 use PHPUnit\Framework\TestCase;
 
 class ConcreteDonutTest extends TestCase
@@ -18,6 +19,7 @@ class ConcreteDonutTest extends TestCase
     public function testInstantiation () : void
     {
         $this->assertNotNull($this->sut);
+        $this->assertInstanceOf(Donut::class, $this->sut);
     }
 
     public function testGetCostType () : void
